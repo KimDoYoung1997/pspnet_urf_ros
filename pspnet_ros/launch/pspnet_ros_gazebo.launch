@@ -10,8 +10,10 @@
 	  
           <param name="number_of_class"      value="10"/>  <!-- 25 -->
           <param name="model_path"        value="/home/nvidia/pspnet_ros/src/pspnet_ros/script/weight/rugd/train_epoch_100_reduced_2.pth"/> <!-- train_epoch_100.pth-->
-          <param name="color_list_path"        value="/home/nvidia/pspnet_ros/src/pspnet_ros/script/list/rugd/rugd_colors_reduced_2.txt"/> <!-- rugd_colors.txt -->
-          <param name="class_name_list_path"        value="/home/nvidia/pspnet_ros/src/pspnet_ros/script/list/rugd/rugd_names_reduced_2.txt"/> <!-- rugd_names.txt -->
+          <param name="color_list_path"        value="/root/melodic/catkin_ws/src/pspnet_urf_ros/pspnet_ros/script/list/rugd/rugd_colors_reduced_2.txt"/> <!-- rugd_colors.txt -->
+
+          
+          <param name="class_name_list_path"        value="/root/melodic/catkin_ws/src/pspnet_urf_ros/pspnet_ros/script/list/rugd/rugd_names_reduced_2.txt"/> <!-- rugd_names.txt -->
 
           <param name="base_size"      value="256"/> <!-- 424-->
           <param name="image_height_net_input"      value="257"/> <!-- 241 -->
@@ -21,8 +23,8 @@
           <param name="number_of_gpu"      value="2"/>
           <param name="number_of_pspnet_layers"      value="50"/>  <!-- 50 or 100 -->
 
-          <param name="color_image_topic_name"        value="camera/color/image_raw"/> <!-- front_cam/camera/color/image_raw -->
-	  <param name="depth_image_topic_name"        value="camera/depth/image_rect_raw"/> <!-- front_cam/camera/depth/image_rect_raw -->
+          <param name="color_image_topic_name"        value="/camera/rgb/image_raw"/> <!-- front_cam/camera/color/image_raw -->
+	  <param name="depth_image_topic_name"        value="camera/depth/image_raw"/> <!-- front_cam/camera/depth/image_rect_raw -->
           <param name="depth_camera_info_topic_name"        value="camera/depth/camera_info"/>
           <param name="urf_enable"      value="True"/>  <!-- True -->
           <param name="adaptive_urf_enable"      value="True"/>  <!-- True -->

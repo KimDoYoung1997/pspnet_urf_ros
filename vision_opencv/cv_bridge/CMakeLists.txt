@@ -13,16 +13,26 @@ if(NOT ANDROID)
 else()
 find_package(Boost REQUIRED)
 endif()
+#find_package(OpenCV 3 REQUIRED
+#  COMPONENTS
+#    opencv_core
+#    opencv_imgproc
+#    opencv_imgcodecs
+#  CONFIG
+#  PATHS /home/nvidia/libs/opencv3.4/release
+#  NO_DEFAULT_PATH
+#)
+
+
+
+set(OpenCV_DIR /root/libs/opencv3.4/release)
+
 find_package(OpenCV 3 REQUIRED
-  COMPONENTS
-    opencv_core
-    opencv_imgproc
-    opencv_imgcodecs
-  CONFIG
-  PATHS /home/nvidia/libs/opencv3.4/release
+  PATHS /root/libs/opencv3.4/release
   NO_DEFAULT_PATH
 )
 
+# find_package(OpenCV REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}

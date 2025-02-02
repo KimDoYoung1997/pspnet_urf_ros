@@ -115,10 +115,10 @@ class pspnet_node:
         print(self.model)
         self.model = torch.nn.DataParallel(self.model).cuda()
         cudnn.benchmark = True  # correct location for cudnn.benchmark?
-        rospy.loginfo("=> loaded checkpoint '{%s}'",self.model_path)
+        # rospy.loginfo("=> loaded checkpoint '{%s}'",self.model_path)
 
-        checkpoint = torch.load(self.model_path)
-        self.model.load_state_dict(checkpoint['state_dict'], strict=False)
+        # checkpoint = torch.load(self.model_path)
+        # self.model.load_state_dict(checkpoint['state_dict'], strict=False)
         
         self.img_receive_flag = False
         

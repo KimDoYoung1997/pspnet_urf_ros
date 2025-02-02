@@ -1,12 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(pspnet_ros)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
+
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
@@ -20,10 +16,16 @@ find_package(catkin REQUIRED COMPONENTS
 #find_package(cv_bridge)
 
 
+set(OpenCV_DIR /root/libs/opencv3.4/release)
+
 find_package(OpenCV 3 REQUIRED
-PATHS /home/nvidia/libs/opencv3.4/release
+  PATHS /root/libs/opencv3.4/release
   NO_DEFAULT_PATH
 )
+
+
+
+
 find_package(Boost REQUIRED COMPONENTS system thread)
 find_package(PCL 1.7 REQUIRED)
 add_definitions(${PCL_DEFINITIONS})
@@ -139,6 +141,7 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
   ${PCL_INCLUDE_DIRS}
 )
+link_directories(${OpenCV_LIB_DIR})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
